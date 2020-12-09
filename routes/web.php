@@ -18,3 +18,6 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/stock/{symbol}', 'StockController@getSymbol');
+$router->get('/stock', function () {
+    return view('stock');
+});

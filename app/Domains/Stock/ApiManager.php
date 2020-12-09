@@ -54,8 +54,6 @@ class ApiManager
 
     private function getResult($resultData)
     {
-        return json_decode($resultData)
-            ->quoteSummary
-            ->result;
+        return json_decode($resultData, true)['quoteSummary']['result'][0];
     }
 }
